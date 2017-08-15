@@ -253,7 +253,7 @@ class Main extends PluginBase implements Listener{
 				      }
 		    break;
 		   case "about":
-		    $sender->sendMessage("§bBounty v3.0 by §aInfernus101\n§eCheckout my MCPE server IP: FallenTech.tk Port: 19132");
+		    $sender->sendMessage("§5FactionsBounty v1.0.0 by §aZeao. n§eThis plugin was bought to you by §6Void§bFactions§cPE! §aOur server IP: §cvoidfactionspe.factions.live Port - 19132");
 		    break;   
 		   default:
 		    $sender->sendMessage("§cUsage: /bounty <set | me | search | top | about>");
