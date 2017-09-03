@@ -1,7 +1,7 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/TheFixerDevelopment/BountyPE
 branches:
-- master
+- Patch-1
 projects:
-  BountyPE:
+  Bounty:
     path: ""
 ...
