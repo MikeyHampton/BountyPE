@@ -146,17 +146,17 @@ class Main extends PluginBase implements Listener{
 		 }
     }
 }
-	    public function onCommand(CommandSender $sender, Command $cmd, $label, array $args) {
+	    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool {
 		////////////////////// BOUNTY //////////////////////
 		 if(strtolower($cmd->getName()) == "bounty"){	
 		   if(!isset($args[0])){
-		        $sender->sendMessage("§cWrong command. §dUsages: §5/bounty <set | me | search | top | about>");
+		        $sender->sendMessage("§cWrong command. §dPlease use: §5/bounty <set | me | search | top | about>");
 			    return false;
 		   }	
 		 switch(strtolower($args[0])){
 		 case "set":
 		   if(!(isset($args[1])) or !(isset($args[2]))){
-			   $sender->sendMessage("§cWrong usage. §dCorrect Usage: §5/bounty set <player> <money>");
+			   $sender->sendMessage("§cWrong usage. §dPlease use: §5/bounty set <player> <money>");
 			   break;
 		   }
 		   $invited = $args[1];
@@ -173,7 +173,7 @@ class Main extends PluginBase implements Listener{
 			   break;
 		   }
 		   if(!is_numeric($args[2])) {
-			   $sender->sendMessage("§cWrong usage. §dCorrect Usage: §5/bounty set $args[1] <money>\n§bBOUNTY> §6Money has to be a number!");
+			   $sender->sendMessage("§cWrong usage. §dPlease use: §5/bounty set $args[1] <money>\n§bBOUNTY> §6Money has to be a number!");
 			   break;
 		   }
 		   $min = $this->cfg->get("min_bounty");
@@ -207,7 +207,7 @@ class Main extends PluginBase implements Listener{
 		   case "me":
 			   $lower = strtolower($sender->getName());
 			   if(isset($args[1])){
-				   $sender->sendMessage("§dUsage: §5/bounty me");
+				   $sender->sendMessage("§dPlease use: §5/bounty me");
 				   break;
 			   }
 			   if(!$this->bountyExists($lower)){
@@ -223,7 +223,7 @@ class Main extends PluginBase implements Listener{
 		   
 		   case "search":
 			   if(!isset($args[1])){
-				   $sender->sendMessage("§dUsage: §5/bounty search <player>");
+				   $sender->sendMessage("§dPlease use: §5/bounty search <player>");
 				   break;
 			   }
 			   $lower = strtolower($args[1]);
@@ -239,7 +239,7 @@ class Main extends PluginBase implements Listener{
 			       break;
 		   case "top":
 		       if(isset($args[1])){
-				   $sender->sendMessage("§dUsage: §5/bounty top");
+				   $sender->sendMessage("§dPlease use: §5/bounty top");
 				   break;
 			   }
 			          $sender->sendMessage("§a--------- §bTop 10 MOST WANTED LIST §a---------");
@@ -256,7 +256,7 @@ class Main extends PluginBase implements Listener{
 		    $sender->sendMessage("§5Bounty v1.0.0 by §aZeao. n§eThis plugin was bought to you by §6Void§bFactions§cPE! §aOur server IP: §cvoidfactionspe.factions.live Port - 19132");
 		    break;   
 		   default:
-		    $sender->sendMessage("§dUsage: §5/bounty <set | me | search | top | about>");
+		    $sender->sendMessage("§dPlease use: §5/bounty <set | me | search | top | about>");
 		    break;
 			 }
 	}
