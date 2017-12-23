@@ -200,6 +200,7 @@ class Main extends PluginBase implements Listener{
 						switch($fail){
 							case EconomyAPI::RET_INVALID:
 								$sender->sendMessage("§6[BOUNTY]> §5You do not have enough money to set that bounty!");
+								return false;
 								break;
 							case EconomyAPI::RET_CANCELLED:
 								$sender->sendMessage("§bBOUNTY> §6ERROR!");
