@@ -26,7 +26,7 @@ use onebone\economyapi\EconomyAPI;
 class Main extends PluginBase implements Listener{
     public $db;
 	public function onEnable(){
-    $this->getLogger()->info("§b§lLoaded Bounty by Infernus101");
+    $this->getLogger()->info("§b§lLoaded Bounty by Zeao succesfully.");
 		$files = array("config.yml");
 		foreach($files as $file){
 			if(!file_exists($this->getDataFolder() . $file)) {
@@ -253,7 +253,7 @@ class Main extends PluginBase implements Listener{
 				      }
 		    break;
 		   case "about":
-		    $sender->sendMessage("§5Bounty v1.0.0 by §aZeao. n§eThis plugin was bought to you by §6Void§bFactions§cPE! §aOur server IP: §cvoidfactionspe.factions.live Port - 19132");
+		    $sender->sendMessage("§5Bounty v2.0.0-beta1 by §aZeao. n§eThis plugin was bought to you by §6Void§bFactions§cPE! §aOur server IP: §cvoidfactionspe.ml Port - 19132");
 		    break;   
 		   default:
 		    $sender->sendMessage("§dPlease use: §5/bounty <set | me | search | top | about>");
