@@ -168,7 +168,7 @@ class Main extends PluginBase implements Listener{
 			   return true;
 			   break;
 		   }
-		    $playerid = $this->getServer()->getPlayerExact($lower);
+		    $playerid = $this->getServer()->getPlayer($lower);
 			$money = $args[2];
 		   if(!$playerid instanceof Player) {
 			   $sender->sendMessage("§6[BOUNTY]> §dPlayer not found!");
